@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #0b0b0b;
+  color: #ffffff;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 8%;
+  align-items: center;
+}
+
+.logo span {
+  color: #00ff99;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 90px 8%;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+}
+
+.hero-text p {
+  margin-top: 20px;
+  max-width: 480px;
+  opacity: 0.85;
+}
+
+/* TYPING TEXT */
+#typing {
+  color: #00ff99;
+  border-right: 2px solid #00ff99;
+  padding-right: 6px;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+/* IMAGE */
+.hero-image {
+  position: relative;
+}
+
+.hero-image img {
+  width: 260px;
+  border-radius: 50%;
+  z-index: 2;
+  position: relative;
+  animation: float 4s ease-in-out infinite;
+}
+
+.circle {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: #00ff99;
+  border-radius: 50%;
+  top: -20px;
+  left: -20px;
+  z-index: 1;
+}
+
+/* FLOAT ANIMATION */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+/* SECTIONS */
+section {
+  padding: 80px 8%;
+}
+
+h2 {
+  color: #00ff99;
+  margin-bottom: 20px;
+}
+
+/* SKILLS */
+.skills {
+  list-style: none;
+}
+
+.skills li {
+  padding: 6px 0;
+  border-left: 3px solid #00ff99;
+  padding-left: 12px;
+  margin-bottom: 6px;
+}
+
+/* PROJECTS */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: #111;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #00ff9944;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px #00ff9955;
+}
+
+.project-card h3 {
+  color: #00ff99;
+  margin-bottom: 10px;
+}
+
+/* FADE IN */
+.fade {
+  animation: fadeUp 1.2s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #050505;
+  font-size: 14px;
+}
